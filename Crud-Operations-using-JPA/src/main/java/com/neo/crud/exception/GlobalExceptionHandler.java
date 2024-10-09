@@ -20,9 +20,5 @@ public class GlobalExceptionHandler {
         return ex.getMessage();
     }
 
-    @ExceptionHandler(ProjectNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public String handleProjectNotFoundException(DepartmentNotFoundException ex) {
-        return ex.getMessage();
-    }
+
 }

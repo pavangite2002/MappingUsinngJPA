@@ -27,12 +27,12 @@ public class EmployeeController {
         return employeeService.createEmployee(employee);
     }
 
-    @PutMapping("{id}")
+    @PutMapping("/{id}")
     public Employee updateemployee(@PathVariable Long id, @RequestBody Employee employee) {
         return employeeService.updateEmployee(id, employee);
     }
 
-    @DeleteMapping("{id}")
+    @DeleteMapping("/{id}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void deleteEmployee(@PathVariable Long id) {
         employeeService.deleteEmoloyee(id);
